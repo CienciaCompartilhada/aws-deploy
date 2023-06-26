@@ -14,7 +14,7 @@ services:
     container_name: node
     build: ./back-end
     ports:
-      - 5000:5000
+      - 4000:4000
     depends_on:
       - postgres
     env_file:
@@ -35,7 +35,7 @@ services:
     container_name: nginx_app
     build: ./nginx
     ports:
-      - 80:80
+      - 5001:80
       - 443:443
     volumes:
       - react-volume:/var/www/html
