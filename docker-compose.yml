@@ -18,7 +18,7 @@ services:
     depends_on:
       - postgres
     env_file:
-      - back-end/.env
+      - ./back-end/.env
 
   react:
     container_name: react
