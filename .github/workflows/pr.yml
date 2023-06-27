@@ -13,6 +13,8 @@ jobs:
           envkey_POSTGRES_PASSWORD: "postgres"
           envkey_POSTGRES_DB: "name"
           envkey_DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/name"
+          envkey_JWT_SECRET: "top_secret"
+          envkey_NODE_ENV: "production"
           directory: back-end
           file_name: .env.test
       - name: Run database migrations
