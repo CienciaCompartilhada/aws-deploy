@@ -15,5 +15,7 @@ jobs:
           envkey_DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/name"
           directory: back-end
           file_name: .env.test
+      - name: Run database migrations
+        run: docker-compose -f docker-compose-test.yml run api npm run prisma:migrate:deploy
       - name: Run tests
         run: docker-compose -f docker-compose-test.yml run api npm run test
