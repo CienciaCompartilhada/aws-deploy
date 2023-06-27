@@ -3,12 +3,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function seedExpertise() {
-  const expertise = [
-    "Engenharia Civil",
-    "Medicina",
-    "Direito",
-    "Administração",
-  ];
+  const expertise = ['Engenharia Civil', 'Medicina', 'Direito', 'Administração'];
   const expertisePromises = expertise.map(async (name) => {
     await prisma.expertise.deleteMany({
       where: {
@@ -28,10 +23,10 @@ async function seedExpertise() {
 
 async function seedUniversity() {
   const universities = [
-    "UNB - Universidade de Brasília",
-    "UFMG - Universidade Federal de Minas Gerais",
-    "UFBA - Universidade Federal da Bahia",
-    "UniCeub - Centro Universitário de Brasília",
+    'UNB - Universidade de Brasília',
+    'UFMG - Universidade Federal de Minas Gerais',
+    'UFBA - Universidade Federal da Bahia',
+    'UniCeub - Centro Universitário de Brasília',
   ];
   const universityPromises = universities.map(async (name) => {
     await prisma.university.deleteMany({
