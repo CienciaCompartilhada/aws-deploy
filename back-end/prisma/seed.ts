@@ -2,6 +2,8 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 //comment
+//comment2
+//comment3
 async function seedExpertise() {
   const expertise = ['Engenharia Civil', 'Medicina', 'Direito', 'Administração'];
   const expertisePromises = expertise.map(async (name) => {
